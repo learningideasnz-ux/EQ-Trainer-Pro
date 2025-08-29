@@ -1,0 +1,1042 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title></title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="2575.7">
+  <style type="text/css">
+    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica}
+    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; min-height: 14.0px}
+  </style>
+</head>
+<body>
+<p class="p1">&lt;!DOCTYPE html&gt;</p>
+<p class="p1">&lt;html lang="en"&gt;</p>
+<p class="p1">&lt;head&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;meta charset="UTF-8"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;title&gt;EQ Trainer Pro&lt;/title&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;style&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap');</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>* {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>margin: 0;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>padding: 0;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>box-sizing: border-box;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>body {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>font-family: 'Inter', sans-serif;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background: #1a1d23;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>color: #e1e5e9;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>min-height: 100vh;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>line-height: 1.4;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.app-container {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>max-width: 1000px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>margin: 0 auto;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>padding: 20px;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.header {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>text-align: center;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>margin-bottom: 32px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background: #252932;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>padding: 24px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border-radius: 12px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border: 1px solid #3a404a;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.header h1 {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>font-size: 2.2em;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>font-weight: 700;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>color: #ffffff;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>margin-bottom: 8px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>letter-spacing: -0.5px;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.header-subtitle {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>color: #9ca3af;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>font-size: 1em;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>margin-bottom: 16px;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.stats-container {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>display: flex;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>justify-content: center;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>gap: 20px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>flex-wrap: wrap;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.stat-badge {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background: #2d3748;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>padding: 8px 16px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border-radius: 20px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>font-weight: 600;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>font-size: 0.9em;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border: 1px solid #4a5568;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.stat-badge.level {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background: #065f46;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>color: #10b981;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border-color: #059669;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.stat-badge.correct {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background: #1e3a8a;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>color: #3b82f6;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border-color: #2563eb;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.stat-badge.wrong {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background: #7f1d1d;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>color: #ef4444;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border-color: #dc2626;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.main-content {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>display: grid;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>grid-template-columns: 1fr 300px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>gap: 24px;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.control-panel {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background: #252932;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border-radius: 12px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>padding: 24px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border: 1px solid #3a404a;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.settings-panel {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background: #252932;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border-radius: 12px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>padding: 24px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border: 1px solid #3a404a;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.section-title {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>color: #f9fafb;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>font-size: 1.1em;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>font-weight: 600;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>margin-bottom: 16px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>letter-spacing: 0.5px;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.file-upload {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>margin-bottom: 24px;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.file-input-wrapper {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>position: relative;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>display: inline-block;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>width: 100%;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.file-input {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>opacity: 0;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>position: absolute;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>z-index: -1;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.file-input-label {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>display: block;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background: #374151;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>color: #f9fafb;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>padding: 12px 16px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border-radius: 8px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>cursor: pointer;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>text-align: center;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>transition: all 0.2s ease;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border: 1px solid #4b5563;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>font-weight: 500;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.file-input-label:hover {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background: #4b5563;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border-color: #10b981;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.file-name {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>margin-top: 8px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>color: #10b981;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>font-size: 0.85em;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>font-weight: 500;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.audio-controls {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>margin-bottom: 24px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>display: flex;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>gap: 8px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>flex-wrap: wrap;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.control-button {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background: #374151;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>color: #f9fafb;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border: 1px solid #4b5563;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>padding: 10px 16px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border-radius: 8px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>cursor: pointer;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>font-size: 0.9em;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>font-family: inherit;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>font-weight: 500;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>transition: all 0.2s ease;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>flex: 1;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>min-width: 120px;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.control-button:hover {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background: #4b5563;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border-color: #10b981;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.control-button:disabled {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>opacity: 0.5;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>cursor: not-allowed;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.control-button.active {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background: #10b981;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>color: #064e3b;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border-color: #059669;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>font-weight: 600;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.audio-scrubber {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>margin: 24px 0;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background: #1f2937;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>padding: 16px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border-radius: 8px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border: 1px solid #374151;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.scrubber-label {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>color: #9ca3af;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>font-weight: 500;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>margin-bottom: 8px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>font-size: 0.85em;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>text-transform: uppercase;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>letter-spacing: 0.5px;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.audio-slider {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>width: 100%;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>height: 4px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border-radius: 2px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background: #374151;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>outline: none;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>-webkit-appearance: none;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border: none;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.audio-slider::-webkit-slider-thumb {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>-webkit-appearance: none;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>appearance: none;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>width: 16px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>height: 16px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border-radius: 50%;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background: #10b981;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>cursor: pointer;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border: none;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>transition: all 0.2s ease;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.audio-slider::-webkit-slider-thumb:hover {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background: #059669;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>transform: scale(1.1);</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.audio-slider::-moz-range-thumb {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>width: 16px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>height: 16px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border-radius: 50%;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background: #10b981;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>cursor: pointer;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border: none;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.audio-slider:disabled {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>opacity: 0.4;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.time-display {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>display: flex;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>justify-content: space-between;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>margin-top: 8px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>font-size: 0.8em;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>color: #6b7280;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>font-weight: 500;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.level-info {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background: #1f2937;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>padding: 16px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border-radius: 8px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>margin-bottom: 20px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border-left: 3px solid #10b981;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.level-info-title {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>font-weight: 600;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>margin-bottom: 8px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>color: #f9fafb;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.level-instructions {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>color: #d1d5db;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>font-size: 0.9em;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.game-status {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>text-align: center;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>margin-bottom: 20px;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.progress-label {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>color: #9ca3af;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>font-size: 0.85em;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>margin-bottom: 8px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>font-weight: 500;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.progress-bar {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>width: 100%;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>height: 8px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background: #374151;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border-radius: 4px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>overflow: hidden;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border: 1px solid #4b5563;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.progress-fill {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>height: 100%;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background: #10b981;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>width: 0%;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>transition: width 0.3s ease;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.frequency-grid {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>display: grid;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));</p>
+<p class="p1"><span class="Apple-converted-space">            </span>gap: 12px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>margin-bottom: 20px;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.frequency-button {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background: #374151;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>color: #f9fafb;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border: 1px solid #4b5563;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>padding: 20px 12px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border-radius: 8px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>cursor: pointer;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>font-size: 1em;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>font-family: inherit;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>font-weight: 600;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>text-align: center;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>transition: all 0.2s ease;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>min-height: 60px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>display: flex;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>align-items: center;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>justify-content: center;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.frequency-button:hover {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background: #4b5563;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border-color: #10b981;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>transform: translateY(-1px);</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.frequency-button.correct {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background: #10b981;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>color: #064e3b;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border-color: #059669;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>animation: correctPulse 0.4s ease;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.frequency-button.incorrect {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background: #ef4444;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>color: #ffffff;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border-color: #dc2626;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>animation: incorrectShake 0.3s ease;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>@keyframes correctPulse {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>0% { transform: translateY(-1px) scale(1); }</p>
+<p class="p1"><span class="Apple-converted-space">            </span>50% { transform: translateY(-2px) scale(1.02); }</p>
+<p class="p1"><span class="Apple-converted-space">            </span>100% { transform: translateY(-1px) scale(1); }</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>@keyframes incorrectShake {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>0%, 100% { transform: translateX(0); }</p>
+<p class="p1"><span class="Apple-converted-space">            </span>25% { transform: translateX(-2px); }</p>
+<p class="p1"><span class="Apple-converted-space">            </span>75% { transform: translateX(2px); }</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.settings-group {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>margin-bottom: 20px;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.settings-label {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>display: block;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>margin-bottom: 6px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>color: #d1d5db;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>font-weight: 500;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>font-size: 0.9em;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.settings-input {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>width: 100%;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>padding: 10px 12px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background: #374151;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border: 1px solid #4b5563;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border-radius: 6px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>color: #f9fafb;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>font-family: inherit;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>font-size: 0.9em;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.settings-input:focus {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>outline: none;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border-color: #10b981;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background: #4b5563;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.level-overview {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background: #1f2937;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>padding: 16px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border-radius: 8px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>font-size: 0.8em;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>line-height: 1.5;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>color: #9ca3af;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.level-overview-title {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>color: #f9fafb;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>font-weight: 600;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>margin-bottom: 8px;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.modal {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>display: none;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>position: fixed;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>z-index: 1000;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>left: 0;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>top: 0;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>width: 100%;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>height: 100%;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background-color: rgba(0,0,0,0.75);</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.modal-content {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background: #252932;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>margin: 15% auto;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>padding: 32px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border-radius: 12px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border: 1px solid #3a404a;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>width: 400px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>text-align: center;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.modal h2 {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>margin-bottom: 16px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>font-size: 1.5em;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>font-weight: 700;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.modal p {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>margin-bottom: 24px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>color: #d1d5db;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.level-up h2 {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>color: #10b981;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.game-over h2 {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>color: #ef4444;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>@media (max-width: 768px) {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>.main-content {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>grid-template-columns: 1fr;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>gap: 16px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>}</p>
+<p class="p2"><span class="Apple-converted-space">            </span></p>
+<p class="p1"><span class="Apple-converted-space">            </span>.frequency-grid {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>grid-template-columns: repeat(3, 1fr);</p>
+<p class="p1"><span class="Apple-converted-space">            </span>}</p>
+<p class="p2"><span class="Apple-converted-space">            </span></p>
+<p class="p1"><span class="Apple-converted-space">            </span>.audio-controls {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>flex-direction: column;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>}</p>
+<p class="p2"><span class="Apple-converted-space">            </span></p>
+<p class="p1"><span class="Apple-converted-space">            </span>.control-button {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>min-width: auto;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/style&gt;</p>
+<p class="p1">&lt;/head&gt;</p>
+<p class="p1">&lt;body&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="app-container"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="header"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;h1&gt;EQ Trainer Pro&lt;/h1&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="header-subtitle"&gt;Professional Frequency Recognition Training&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="stats-container"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="stat-badge level"&gt;Level &lt;span id="currentLevel"&gt;1&lt;/span&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="stat-badge correct"&gt;Correct: &lt;span id="correctCount"&gt;0&lt;/span&gt;/5&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="stat-badge wrong"&gt;Wrong: &lt;span id="wrongCount"&gt;0&lt;/span&gt;/3&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="main-content"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="control-panel"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="section-title"&gt;Audio Control&lt;/div&gt;</p>
+<p class="p2"><span class="Apple-converted-space">                </span></p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="file-upload"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="file-input-wrapper"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;input type="file" id="audioFile" class="file-input" accept="audio/*"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;label for="audioFile" class="file-input-label"&gt;Choose Audio File&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div id="fileName" class="file-name"&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="audio-controls"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;button id="playBtn" class="control-button"&gt;Play&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;button id="stopBtn" class="control-button"&gt;Stop&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;button id="toggleBoostBtn" class="control-button" disabled&gt;Toggle EQ&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="audio-scrubber"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="scrubber-label"&gt;Position&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="scrubber-container"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;input type="range" id="audioScrubber" class="audio-slider"<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-converted-space">                               </span>min="0" max="100" value="0" step="0.1" disabled&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;div class="time-display"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;span id="currentTime"&gt;0:00&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;span id="totalTime"&gt;0:00&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="level-info"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="level-info-title"&gt;Level &lt;span id="levelNumber"&gt;1&lt;/span&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="level-instructions" id="levelInstructions"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>Play audio, toggle the EQ boost on/off, and identify the emphasized frequency.</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="game-status"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="progress-label"&gt;Progress to Next Level&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="progress-bar"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;div class="progress-fill" id="progressFill"&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="section-title"&gt;Select Frequency&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="frequency-grid" id="frequencyGrid"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;!-- Frequency buttons will be generated here --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="settings-panel"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="section-title"&gt;Settings&lt;/div&gt;</p>
+<p class="p2"><span class="Apple-converted-space">                </span></p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="settings-group"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;label class="settings-label" for="boostAmount"&gt;EQ Boost (dB)&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;input type="number" id="boostAmount" class="settings-input" min="3" max="15" value="6" step="1"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="settings-group"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;button id="resetGame" class="control-button" style="width: 100%;"&gt;Reset Training&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="level-overview"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="level-overview-title"&gt;Training Levels&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>Level 1: 250Hz, 2KHz&lt;br&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>Level 2: 250Hz, 1KHz, 4KHz&lt;br&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>Level 3: 100Hz, 500Hz, 1.5KHz, 4KHz&lt;br&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>Level 4: 100Hz, 250Hz, 1KHz, 4KHz&lt;br&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>Level 5: 60Hz, 200Hz, 500Hz, 1KHz, 2KHz, 4KHz&lt;br&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>Level 6: 60Hz, 200Hz, 500Hz, 1KHz, 2KHz, 4KHz, 10KHz</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;!-- Modals --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div id="levelUpModal" class="modal"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="modal-content"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;h2 class="level-up"&gt;Level Complete!&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;p&gt;You've advanced to Level &lt;span id="newLevel"&gt;&lt;/span&gt;. Well done!&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;button class="control-button" onclick="closeModal('levelUpModal')"&gt;Continue Training&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div id="gameOverModal" class="modal"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="modal-content"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;h2 class="game-over"&gt;Training Complete&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;p&gt;You reached Level &lt;span id="finalLevel"&gt;&lt;/span&gt;. Time to practice more!&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;button class="control-button" onclick="resetGame()"&gt;Start Over&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;audio id="audioPlayer" preload="auto"&gt;&lt;/audio&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;script&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>class EQTrainer {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>constructor() {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>this.currentLevel = 1;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>this.correctCount = 0;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>this.wrongCount = 0;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>this.currentFrequency = null;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>this.audioContext = null;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>this.audioBuffer = null;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>this.sourceNode = null;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>this.gainNode = null;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>this.filterNode = null;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>this.isPlaying = false;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>this.isBoostActive = false;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>this.audioStartTime = 0;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>this.audioPosition = 0;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>this.updateInterval = null;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>this.isScrubbing = false;</p>
+<p class="p2"><span class="Apple-converted-space">                </span></p>
+<p class="p1"><span class="Apple-converted-space">                </span>this.levels = {</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>1: [250, 2000],</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>2: [250, 1000, 4000],</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>3: [100, 500, 1500, 4000],</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>4: [100, 250, 1000, 4000],</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>5: [60, 200, 500, 1000, 2000, 4000],</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>6: [60, 200, 500, 1000, 2000, 4000, 10000]</p>
+<p class="p1"><span class="Apple-converted-space">                </span>};</p>
+<p class="p2"><span class="Apple-converted-space">                </span></p>
+<p class="p1"><span class="Apple-converted-space">                </span>this.initializeAudio();</p>
+<p class="p1"><span class="Apple-converted-space">                </span>this.setupEventListeners();</p>
+<p class="p1"><span class="Apple-converted-space">                </span>this.updateDisplay();</p>
+<p class="p1"><span class="Apple-converted-space">                </span>this.generateFrequencyButtons();</p>
+<p class="p1"><span class="Apple-converted-space">            </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">            </span>async initializeAudio() {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>try {</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>this.audioContext = new (window.AudioContext || window.webkitAudioContext)();</p>
+<p class="p1"><span class="Apple-converted-space">                </span>} catch (error) {</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>console.error('Audio context initialization failed:', error);</p>
+<p class="p1"><span class="Apple-converted-space">                </span>}</p>
+<p class="p1"><span class="Apple-converted-space">            </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">            </span>setupEventListeners() {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>document.getElementById('audioFile').addEventListener('change', (e) =&gt; this.handleFileUpload(e));</p>
+<p class="p1"><span class="Apple-converted-space">                </span>document.getElementById('playBtn').addEventListener('click', () =&gt; this.playAudio());</p>
+<p class="p1"><span class="Apple-converted-space">                </span>document.getElementById('stopBtn').addEventListener('click', () =&gt; this.stopAudio());</p>
+<p class="p1"><span class="Apple-converted-space">                </span>document.getElementById('toggleBoostBtn').addEventListener('click', () =&gt; this.toggleBoost());</p>
+<p class="p1"><span class="Apple-converted-space">                </span>document.getElementById('resetGame').addEventListener('click', () =&gt; this.resetGame());</p>
+<p class="p1"><span class="Apple-converted-space">                </span>document.getElementById('boostAmount').addEventListener('change', () =&gt; this.updateSettings());</p>
+<p class="p2"><span class="Apple-converted-space">                </span></p>
+<p class="p1"><span class="Apple-converted-space">                </span>// Audio scrubber events</p>
+<p class="p1"><span class="Apple-converted-space">                </span>document.getElementById('audioScrubber').addEventListener('input', (e) =&gt; this.scrubAudio(e));</p>
+<p class="p1"><span class="Apple-converted-space">                </span>document.getElementById('audioScrubber').addEventListener('mousedown', () =&gt; this.isScrubbing = true);</p>
+<p class="p1"><span class="Apple-converted-space">                </span>document.getElementById('audioScrubber').addEventListener('mouseup', () =&gt; this.isScrubbing = false);</p>
+<p class="p1"><span class="Apple-converted-space">            </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">            </span>async handleFileUpload(event) {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>const file = event.target.files[0];</p>
+<p class="p1"><span class="Apple-converted-space">                </span>if (!file) return;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">                </span>document.getElementById('fileName').textContent = file.name;</p>
+<p class="p2"><span class="Apple-converted-space">                </span></p>
+<p class="p1"><span class="Apple-converted-space">                </span>try {</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>console.log('Loading audio file:', file.name);</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>const arrayBuffer = await file.arrayBuffer();</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>this.audioBuffer = await this.audioContext.decodeAudioData(arrayBuffer);</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>console.log('Audio file loaded successfully:', {</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>duration: this.audioBuffer.duration,</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>sampleRate: this.audioBuffer.sampleRate,</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>channels: this.audioBuffer.numberOfChannels</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>});</p>
+<p class="p2"><span class="Apple-converted-space">                    </span></p>
+<p class="p1"><span class="Apple-converted-space">                    </span>// Enable and update scrubber</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>const scrubber = document.getElementById('audioScrubber');</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>scrubber.disabled = false;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>scrubber.max = this.audioBuffer.duration;</p>
+<p class="p2"><span class="Apple-converted-space">                    </span></p>
+<p class="p1"><span class="Apple-converted-space">                    </span>// Update time display</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>document.getElementById('totalTime').textContent = this.formatTime(this.audioBuffer.duration);</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>document.getElementById('currentTime').textContent = '0:00';</p>
+<p class="p2"><span class="Apple-converted-space">                    </span></p>
+<p class="p1"><span class="Apple-converted-space">                    </span>this.audioPosition = 0;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>} catch (error) {</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>console.error('Error loading audio file:', error);</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>alert('Error loading audio file. Please try a different file format (MP3, WAV, etc.).');</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>document.getElementById('fileName').textContent = '';</p>
+<p class="p1"><span class="Apple-converted-space">                </span>}</p>
+<p class="p1"><span class="Apple-converted-space">            </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">            </span>generateFrequencyButtons() {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>const grid = document.getElementById('frequencyGrid');</p>
+<p class="p1"><span class="Apple-converted-space">                </span>grid.innerHTML = '';</p>
+<p class="p2"><span class="Apple-converted-space">                </span></p>
+<p class="p1"><span class="Apple-converted-space">                </span>const frequencies = this.levels[this.currentLevel];</p>
+<p class="p2"><span class="Apple-converted-space">                </span></p>
+<p class="p1"><span class="Apple-converted-space">                </span>frequencies.forEach(freq =&gt; {</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>const button = document.createElement('button');</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>button.className = 'frequency-button';</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>button.textContent = this.formatFrequency(freq);</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>button.addEventListener('click', () =&gt; this.selectFrequency(freq, button));</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>grid.appendChild(button);</p>
+<p class="p1"><span class="Apple-converted-space">                </span>});</p>
+<p class="p2"><span class="Apple-converted-space">                </span></p>
+<p class="p1"><span class="Apple-converted-space">                </span>console.log('Generated buttons for frequencies:', frequencies);</p>
+<p class="p1"><span class="Apple-converted-space">            </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">            </span>formatFrequency(freq) {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>if (freq &gt;= 1000) {</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>return `${freq / 1000}kHz`;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>}</p>
+<p class="p1"><span class="Apple-converted-space">                </span>return `${freq}Hz`;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">            </span>async playAudio() {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>if (!this.audioBuffer) {</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>alert('Please upload an audio file first');</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>return;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">                </span>try {</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>// Resume audio context if suspended</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>if (this.audioContext.state === 'suspended') {</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>await this.audioContext.resume();</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">                    </span>// Stop any existing audio</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>this.stopAudio();</p>
+<p class="p2"><span class="Apple-converted-space">                    </span></p>
+<p class="p1"><span class="Apple-converted-space">                    </span>// Select random frequency for this round</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>this.selectRandomFrequency();</p>
+<p class="p2"><span class="Apple-converted-space">                    </span></p>
+<p class="p1"><span class="Apple-converted-space">                    </span>// Set up and start audio playback</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>this.setupAudioNodes();</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>this.startTimeUpdater();</p>
+<p class="p2"><span class="Apple-converted-space">                    </span></p>
+<p class="p1"><span class="Apple-converted-space">                    </span>// Update UI</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>const playBtn = document.getElementById('playBtn');</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>const toggleBtn = document.getElementById('toggleBoostBtn');</p>
+<p class="p2"><span class="Apple-converted-space">                    </span></p>
+<p class="p1"><span class="Apple-converted-space">                    </span>playBtn.classList.add('active');</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>playBtn.textContent = 'Playing';</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>toggleBtn.disabled = false;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>toggleBtn.textContent = 'Toggle EQ';</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>toggleBtn.classList.remove('active');</p>
+<p class="p2"><span class="Apple-converted-space">                    </span></p>
+<p class="p1"><span class="Apple-converted-space">                    </span>this.isPlaying = true;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>this.isBoostActive = false;</p>
+<p class="p2"><span class="Apple-converted-space">                    </span></p>
+<p class="p1"><span class="Apple-converted-space">                    </span>console.log('Audio started playing successfully for frequency:', this.currentFrequency);</p>
+<p class="p1"><span class="Apple-converted-space">                </span>} catch (error) {</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>console.error('Error playing audio:', error);</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>alert('Error playing audio. Please check your audio file and try again.');</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>this.stopAudio();</p>
+<p class="p1"><span class="Apple-converted-space">                </span>}</p>
+<p class="p1"><span class="Apple-converted-space">            </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">            </span>setupAudioNodes() {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>try {</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>// Create source node</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>this.sourceNode = this.audioContext.createBufferSource();</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>this.sourceNode.buffer = this.audioBuffer;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>this.sourceNode.loop = true; // Enable looping</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">                    </span>// Create gain node for volume control</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>this.gainNode = this.audioContext.createGain();</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>this.gainNode.gain.value = 0.7;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">                    </span>// Create filter node for EQ boost</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>this.filterNode = this.audioContext.createBiquadFilter();</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>this.filterNode.type = 'peaking';</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>this.filterNode.frequency.value = this.currentFrequency;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>this.filterNode.Q.value = 2;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>this.filterNode.gain.value = 0; // Start with no boost</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">                    </span>// Connect nodes</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>this.sourceNode.connect(this.filterNode);</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>this.filterNode.connect(this.gainNode);</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>this.gainNode.connect(this.audioContext.destination);</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">                    </span>// Handle source end (shouldn't happen with looping, but just in case)</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>this.sourceNode.onended = () =&gt; {</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>console.log('Source ended unexpectedly');</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>if (this.isPlaying) {</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>// Restart playback if we're still supposed to be playing</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>setTimeout(() =&gt; {</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>if (this.isPlaying) {</p>
+<p class="p1"><span class="Apple-converted-space">                                    </span>console.log('Restarting audio playback');</p>
+<p class="p1"><span class="Apple-converted-space">                                    </span>this.setupAudioNodes();</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>}</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>}, 100);</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>};</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">                    </span>// Start playback from current position with looping enabled</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>this.audioStartTime = this.audioContext.currentTime;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>this.sourceNode.start(0, this.audioPosition);</p>
+<p class="p2"><span class="Apple-converted-space">                    </span></p>
+<p class="p1"><span class="Apple-converted-space">                    </span>console.log(`Audio playback started with looping enabled for frequency: ${this.currentFrequency}Hz at position: ${this.audioPosition.toFixed(2)}s`);</p>
+<p class="p1"><span class="Apple-converted-space">                </span>} catch (error) {</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>console.error('Error setting up audio nodes:', error);</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>alert('Error playing audio. Please try again.');</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>this.stopAudio();</p>
+<p class="p1"><span class="Apple-converted-space">                </span>}</p>
+<p class="p1"><span class="Apple-converted-space">            </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">            </span>toggleBoost() {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>if (!this.isPlaying || !this.filterNode) {</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>console.log('Cannot toggle boost - not playing or no filter node');</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>return;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>}</p>
+<p class="p2"><span class="Apple-converted-space">                </span></p>
+<p class="p1"><span class="Apple-converted-space">                </span>try {</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>const boostAmount = parseFloat(document.getElementById('boostAmount').value);</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>const toggleBtn = document.getElementById('toggleBoostBtn');</p>
+<p class="p2"><span class="Apple-converted-space">                    </span></p>
+<p class="p1"><span class="Apple-converted-space">                    </span>this.isBoostActive = !this.isBoostActive;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>this.filterNode.gain.setValueAtTime(</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>this.isBoostActive ? boostAmount : 0,<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-converted-space">                        </span>this.audioContext.currentTime</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>);</p>
+<p class="p2"><span class="Apple-converted-space">                    </span></p>
+<p class="p1"><span class="Apple-converted-space">                    </span>if (this.isBoostActive) {</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>toggleBtn.classList.add('active');</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>toggleBtn.textContent = 'EQ ON';</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>} else {</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>toggleBtn.classList.remove('active');</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>toggleBtn.textContent = 'Toggle EQ';</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>}</p>
+<p class="p2"><span class="Apple-converted-space">                    </span></p>
+<p class="p1"><span class="Apple-converted-space">                    </span>console.log(`Boost toggled ${this.isBoostActive ? 'ON' : 'OFF'} at ${this.currentFrequency}Hz with ${boostAmount}dB`);</p>
+<p class="p1"><span class="Apple-converted-space">                </span>} catch (error) {</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>console.error('Error toggling boost:', error);</p>
+<p class="p1"><span class="Apple-converted-space">                </span>}</p>
+<p class="p1"><span class="Apple-converted-space">            </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">            </span>stopAudio() {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>try {</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>if (this.sourceNode) {</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>this.sourceNode.stop();</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>this.sourceNode.disconnect();</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>this.sourceNode = null;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>}</p>
+<p class="p2"><span class="Apple-converted-space">                    </span></p>
+<p class="p1"><span class="Apple-converted-space">                    </span>if (this.filterNode) {</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>this.filterNode.disconnect();</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>this.filterNode = null;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>}</p>
+<p class="p2"><span class="Apple-converted-space">                    </span></p>
+<p class="p1"><span class="Apple-converted-space">                    </span>if (this.gainNode) {</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>this.gainNode.disconnect();</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>this.gainNode = null;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>}</p>
+<p class="p2"><span class="Apple-converted-space">                    </span></p>
+<p class="p1"><span class="Apple-converted-space">                    </span>if (this.updateInterval) {</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>clearInterval(this.updateInterval);</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>this.updateInterval = null;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">                    </span>const playBtn = document.getElementById('playBtn');</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>const toggleBtn = document.getElementById('toggleBoostBtn');</p>
+<p class="p2"><span class="Apple-converted-space">                    </span></p>
+<p class="p1"><span class="Apple-converted-space">                    </span>playBtn.classList.remove('active');</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>playBtn.textContent = 'Play';</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>toggleBtn.disabled = true;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>toggleBtn.textContent = 'Toggle EQ';</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>toggleBtn.classList.remove('active');</p>
+<p class="p2"><span class="Apple-converted-space">                    </span></p>
+<p class="p1"><span class="Apple-converted-space">                    </span>this.isPlaying = false;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>this.isBoostActive = false;</p>
+<p class="p2"><span class="Apple-converted-space">                    </span></p>
+<p class="p1"><span class="Apple-converted-space">                    </span>console.log('Audio stopped successfully');</p>
+<p class="p1"><span class="Apple-converted-space">                </span>} catch (error) {</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>console.error('Error stopping audio:', error);</p>
+<p class="p1"><span class="Apple-converted-space">                </span>}</p>
+<p class="p1"><span class="Apple-converted-space">            </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">            </span>startTimeUpdater() {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>this.updateInterval = setInterval(() =&gt; {</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>if (this.isPlaying &amp;&amp; this.audioBuffer &amp;&amp; !this.isScrubbing) {</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>const elapsed = this.audioContext.currentTime - this.audioStartTime;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>this.audioPosition = (this.audioPosition + elapsed) % this.audioBuffer.duration;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>this.audioStartTime = this.audioContext.currentTime;</p>
+<p class="p2"><span class="Apple-converted-space">                        </span></p>
+<p class="p1"><span class="Apple-converted-space">                        </span>// Update scrubber position</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>document.getElementById('audioScrubber').value = this.audioPosition;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>document.getElementById('currentTime').textContent = this.formatTime(this.audioPosition);</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">                </span>}, 100);</p>
+<p class="p1"><span class="Apple-converted-space">            </span>}</p>
+<p class="p2"><span class="Apple-converted-space">            </span></p>
+<p class="p1"><span class="Apple-converted-space">            </span>scrubAudio(event) {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>if (!this.audioBuffer) return;</p>
+<p class="p2"><span class="Apple-converted-space">                </span></p>
+<p class="p1"><span class="Apple-converted-space">                </span>this.audioPosition = parseFloat(event.target.value);</p>
+<p class="p1"><span class="Apple-converted-space">                </span>document.getElementById('currentTime').textContent = this.formatTime(this.audioPosition);</p>
+<p class="p2"><span class="Apple-converted-space">                </span></p>
+<p class="p1"><span class="Apple-converted-space">                </span>// If playing, restart from new position</p>
+<p class="p1"><span class="Apple-converted-space">                </span>if (this.isPlaying) {</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>this.stopAudio();</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>setTimeout(() =&gt; {</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>this.playAudio();</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>}, 50);</p>
+<p class="p1"><span class="Apple-converted-space">                </span>}</p>
+<p class="p1"><span class="Apple-converted-space">            </span>}</p>
+<p class="p2"><span class="Apple-converted-space">            </span></p>
+<p class="p1"><span class="Apple-converted-space">            </span>formatTime(seconds) {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>const mins = Math.floor(seconds / 60);</p>
+<p class="p1"><span class="Apple-converted-space">                </span>const secs = Math.floor(seconds % 60);</p>
+<p class="p1"><span class="Apple-converted-space">                </span>return `${mins}:${secs.toString().padStart(2, '0')}`;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">            </span>selectRandomFrequency() {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>const frequencies = this.levels[this.currentLevel];</p>
+<p class="p1"><span class="Apple-converted-space">                </span>this.currentFrequency = frequencies[Math.floor(Math.random() * frequencies.length)];</p>
+<p class="p1"><span class="Apple-converted-space">                </span>console.log('Target frequency:', this.currentFrequency);</p>
+<p class="p1"><span class="Apple-converted-space">            </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">            </span>selectFrequency(frequency, buttonElement) {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>if (!this.isPlaying) {</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>alert('Please play the audio first');</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>return;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">                </span>this.stopAudio();</p>
+<p class="p2"><span class="Apple-converted-space">                </span></p>
+<p class="p1"><span class="Apple-converted-space">                </span>// Reset all button states</p>
+<p class="p1"><span class="Apple-converted-space">                </span>document.querySelectorAll('.frequency-button').forEach(btn =&gt; {</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>btn.classList.remove('correct', 'incorrect');</p>
+<p class="p1"><span class="Apple-converted-space">                </span>});</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">                </span>if (frequency === this.currentFrequency) {</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>buttonElement.classList.add('correct');</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>this.correctCount++;</p>
+<p class="p2"><span class="Apple-converted-space">                    </span></p>
+<p class="p1"><span class="Apple-converted-space">                    </span>if (this.correctCount &gt;= 5) {</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>this.levelUp();</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">                </span>} else {</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>buttonElement.classList.add('incorrect');</p>
+<p class="p2"><span class="Apple-converted-space">                    </span></p>
+<p class="p1"><span class="Apple-converted-space">                    </span>// Show correct answer</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>document.querySelectorAll('.frequency-button').forEach(btn =&gt; {</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>if (btn.textContent === this.formatFrequency(this.currentFrequency)) {</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>btn.classList.add('correct');</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>});</p>
+<p class="p2"><span class="Apple-converted-space">                    </span></p>
+<p class="p1"><span class="Apple-converted-space">                    </span>this.wrongCount++;</p>
+<p class="p2"><span class="Apple-converted-space">                    </span></p>
+<p class="p1"><span class="Apple-converted-space">                    </span>if (this.wrongCount &gt;= 3) {</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>this.gameOver();</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">                </span>}</p>
+<p class="p2"><span class="Apple-converted-space">                </span></p>
+<p class="p1"><span class="Apple-converted-space">                </span>this.updateDisplay();</p>
+<p class="p2"><span class="Apple-converted-space">                </span></p>
+<p class="p1"><span class="Apple-converted-space">                </span>// Clear button states after 2 seconds</p>
+<p class="p1"><span class="Apple-converted-space">                </span>setTimeout(() =&gt; {</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>document.querySelectorAll('.frequency-button').forEach(btn =&gt; {</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>btn.classList.remove('correct', 'incorrect');</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>});</p>
+<p class="p1"><span class="Apple-converted-space">                </span>}, 2000);</p>
+<p class="p1"><span class="Apple-converted-space">            </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">            </span>levelUp() {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>if (this.currentLevel &lt; 6) {</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>this.currentLevel++;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>this.correctCount = 0;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>this.wrongCount = 0;</p>
+<p class="p2"><span class="Apple-converted-space">                    </span></p>
+<p class="p1"><span class="Apple-converted-space">                    </span>document.getElementById('newLevel').textContent = this.currentLevel;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>document.getElementById('levelUpModal').style.display = 'block';</p>
+<p class="p2"><span class="Apple-converted-space">                    </span></p>
+<p class="p1"><span class="Apple-converted-space">                    </span>this.updateDisplay();</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>this.generateFrequencyButtons();</p>
+<p class="p1"><span class="Apple-converted-space">                </span>} else {</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>alert('Congratulations! You\'ve completed all levels!');</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>this.resetGame();</p>
+<p class="p1"><span class="Apple-converted-space">                </span>}</p>
+<p class="p1"><span class="Apple-converted-space">            </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">            </span>gameOver() {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>document.getElementById('finalLevel').textContent = this.currentLevel;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>document.getElementById('gameOverModal').style.display = 'block';</p>
+<p class="p1"><span class="Apple-converted-space">            </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">            </span>resetGame() {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>this.stopAudio();</p>
+<p class="p1"><span class="Apple-converted-space">                </span>this.currentLevel = 1;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>this.correctCount = 0;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>this.wrongCount = 0;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>this.updateDisplay();</p>
+<p class="p1"><span class="Apple-converted-space">                </span>this.generateFrequencyButtons();</p>
+<p class="p1"><span class="Apple-converted-space">                </span>this.closeModal('gameOverModal');</p>
+<p class="p1"><span class="Apple-converted-space">            </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">            </span>updateDisplay() {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>document.getElementById('currentLevel').textContent = this.currentLevel;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>document.getElementById('levelNumber').textContent = this.currentLevel;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>document.getElementById('correctCount').textContent = this.correctCount;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>document.getElementById('wrongCount').textContent = this.wrongCount;</p>
+<p class="p2"><span class="Apple-converted-space">                </span></p>
+<p class="p1"><span class="Apple-converted-space">                </span>const progressPercent = (this.correctCount / 5) * 100;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>document.getElementById('progressFill').style.width = `${progressPercent}%`;</p>
+<p class="p2"><span class="Apple-converted-space">                </span></p>
+<p class="p1"><span class="Apple-converted-space">                </span>const frequencies = this.levels[this.currentLevel].map(f =&gt; this.formatFrequency(f)).join(', ');</p>
+<p class="p1"><span class="Apple-converted-space">                </span>document.getElementById('levelInstructions').textContent =<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-converted-space">                    </span>`Play audio, toggle the EQ boost on/off, and identify which frequency is emphasized: ${frequencies}`;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">            </span>updateSettings() {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>// Settings are applied in real-time during playback</p>
+<p class="p1"><span class="Apple-converted-space">                </span>if (this.isPlaying &amp;&amp; this.filterNode) {</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>const boostAmount = parseFloat(document.getElementById('boostAmount').value);</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>this.filterNode.gain.value = this.isBoostActive ? boostAmount : 0;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>}</p>
+<p class="p1"><span class="Apple-converted-space">                </span>console.log('Settings updated');</p>
+<p class="p1"><span class="Apple-converted-space">            </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">            </span>closeModal(modalId) {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>document.getElementById(modalId).style.display = 'none';</p>
+<p class="p1"><span class="Apple-converted-space">            </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>// Global functions for modal interactions</p>
+<p class="p1"><span class="Apple-converted-space">        </span>function closeModal(modalId) {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>document.getElementById(modalId).style.display = 'none';</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>function resetGame() {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>if (window.eqTrainer) {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>window.eqTrainer.resetGame();</p>
+<p class="p1"><span class="Apple-converted-space">            </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>// Initialize the app when the page loads</p>
+<p class="p1"><span class="Apple-converted-space">        </span>window.addEventListener('load', () =&gt; {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>window.eqTrainer = new EQTrainer();</p>
+<p class="p1"><span class="Apple-converted-space">        </span>});</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>// Handle modal clicks outside content</p>
+<p class="p1"><span class="Apple-converted-space">        </span>window.addEventListener('click', (event) =&gt; {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>const modals = document.querySelectorAll('.modal');</p>
+<p class="p1"><span class="Apple-converted-space">            </span>modals.forEach(modal =&gt; {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>if (event.target === modal) {</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>modal.style.display = 'none';</p>
+<p class="p1"><span class="Apple-converted-space">                </span>}</p>
+<p class="p1"><span class="Apple-converted-space">            </span>});</p>
+<p class="p1"><span class="Apple-converted-space">        </span>});</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/script&gt;</p>
+<p class="p1">&lt;/body&gt;</p>
+<p class="p1">&lt;/html&gt;</p>
+</body>
+</html>
